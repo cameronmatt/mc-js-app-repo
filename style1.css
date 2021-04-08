@@ -11,47 +11,106 @@ body {
   }
 
 #container {
-  max-width: 1200px;
+  max-width: 960px;
   padding: 24px;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: repeat(12, 1fr); 
   height: 100vh;
+  column-gap: 12px;
+  margin: auto;
 }
 
 header {
   display: flex;
   align-items: center;
-  color:rgb(0, 135, 197)
+  color:rgb(0, 135, 197);
+  grid-column: 1 /span 12;
+}
+
+#chickpea {
+  width: 40px; 
+  height: auto;
+  padding: 5px;
+  padding-bottom: 11px;
 }
 
 .navigation {
   flex-grow: 1;
   margin-left: 40px;
+
 }
 
 .nav-item {
   text-decoration: none;
   color: #bdbdbd;
-  margin left: 24px;
-}
-
-main {
-  display: flex;
+  margin-left: 24px;
 }
 
 .listings-header {
   font-size: 20px;
   font-weight: 100;
-  color:rgb(0, 135, 197)
+  color:rgb(0, 135, 197);
+  grid-column: 4 /span 12;
+  grid-row: 2;
 }
 
-.listings {
-  flex: 1;
+#listings {
+  grid-column: 4 /span 12;
+  color:rgb(0, 135, 197);
+  grid-row: 3;
 }
+/* Listing image size and shadow */
+#propetyImage {
+  width: 100%; 
+  height: auto;
+  box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 10px 10px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc;
+} 
+/* remove the bullet points on the list */
+ul {
+  list-style-type: none;
+  background: white;
+  padding: 30px;
+}
+
+i {
+  padding-left: 30px;
+  padding-right: 5px;
+}
+
+.fa-heart-o {
+  color: red;
+  cursor: pointer;
+  float: right;
+  padding-right: 20px;
+}
+
+.fa-heart {
+  color: red;
+  cursor: pointer;
+  float: right;
+  padding-right: 20px;
+}
+
+.sidebar {
+  grid-column: 1 /span 3;
+  color:rgb(0, 135, 197);
+  grid-row: 3;
+}
+
+.listy {
+  cursor: pointer;
+}
+
 
 footer {
   display: flex;
-  color:rgb(0, 135, 197)
+  color:rgb(0, 135, 197);
+  grid-column: 1 /span 12;
+  grid-row: 4;
 }
 
 .search-bar {
@@ -60,5 +119,8 @@ footer {
   padding: 10px 36px;
   border-radius: 50px;
   font-size: 20px;
-  padding-left: 100px;
+  padding-left: 20px;
+  color: grey;
 }
+
+
